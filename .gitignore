@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+code/lab/results/**/*.pt
+code/lab/logs/
+code/figures/dumps/mqar_where.json

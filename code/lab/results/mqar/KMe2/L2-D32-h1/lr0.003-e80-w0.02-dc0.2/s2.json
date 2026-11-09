@@ -1,0 +1,119 @@
+{
+ "args": {
+  "task": "mqar",
+  "model": "KM",
+  "explicit": 2,
+  "norm": false,
+  "noage": false,
+  "noant": false,
+  "d_model": 32,
+  "heads": 1,
+  "layers": 2,
+  "seed": 2,
+  "lr": 0.003,
+  "epochs": 80,
+  "stop_after": 0,
+  "warmup": 0.02,
+  "decay": 0.2,
+  "frac": 0.1,
+  "pairs": null,
+  "device": null,
+  "threads": 2,
+  "smoke": false
+ },
+ "label": "KMe2",
+ "cfg": {
+  "model": "KM",
+  "mask_self": true,
+  "max_len": 48,
+  "pos_len": 272,
+  "pg_d_osc": 32,
+  "km_explicit": 2,
+  "km_delta": 0.001,
+  "km_rho": 1e-08,
+  "km_norm": false,
+  "km_noage": false,
+  "km_noant": false
+ },
+ "net": {
+  "task": "seq",
+  "vocab": 577,
+  "n_out": 65,
+  "d_model": 32,
+  "n_heads": 1,
+  "n_layers": 2,
+  "d_ff": 64,
+  "dropout": 0.0,
+  "embed_scale": true,
+  "init_std": 0.02,
+  "padding_idx": null,
+  "pe": "none"
+ },
+ "meta": {
+  "vocab": 577,
+  "n_out": 65,
+  "max_len": 48,
+  "kind": "seq"
+ },
+ "params": 35597,
+ "attn_params": 6284,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 3.935550239562988,
+   "lr": 0.0018884462151394423,
+   "secs": 12.5,
+   "val_loss": 3.8241604919433594,
+   "val_acc": 0.20196875,
+   "val_acc_present": 0.0,
+   "val_acc_absent": 1.0
+  },
+  {
+   "epoch": 2,
+   "train_loss": 3.8200533241271972,
+   "lr": 0.003,
+   "secs": 13.5,
+   "val_loss": 3.7564168395996096,
+   "val_acc": 0.20196875,
+   "val_acc_present": 0.0,
+   "val_acc_absent": 1.0
+  }
+ ],
+ "best_epoch": 2,
+ "val": {
+  "loss": 3.7564168395996096,
+  "acc": 0.20196875,
+  "acc_present": 0.0,
+  "acc_absent": 1.0
+ },
+ "test": {
+  "loss": 3.7643555297851563,
+  "acc": 0.1991875,
+  "acc_present": 0.0,
+  "acc_absent": 1.0
+ },
+ "extra": {
+  "P32": {
+   "loss": 3.8101759948730467,
+   "acc": 0.1955,
+   "acc_present": 0.0,
+   "acc_absent": 1.0
+  },
+  "P64": {
+   "loss": 3.8186484031677246,
+   "acc": 0.20275,
+   "acc_present": 0.0,
+   "acc_absent": 1.0
+  },
+  "P128": {
+   "loss": 3.8366587009429933,
+   "acc": 0.202375,
+   "acc_present": 0.0,
+   "acc_absent": 1.0
+  }
+ },
+ "diverged_at": 3,
+ "secs": 50.6,
+ "device": "cpu",
+ "finished": "2026-10-19 17:53:55"
+}

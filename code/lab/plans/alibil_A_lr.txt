@@ -1,0 +1,10 @@
+# 6 Nov 2026: softmax + ALiBi with one learned slope per head (init 2^-1 for one head), phase A: lr at seed 0
+--task mqar --model ALIBIL --epochs 80 --lr 0.001 --seed 0
+--task mqar --model ALIBIL --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model ALIBIL --epochs 80 --lr 0.003 --seed 0
+--task count --kmax 15 --reg --model ALIBIL --epochs 80 --lr 0.001 --seed 0
+--task count --kmax 15 --reg --model ALIBIL --epochs 80 --lr 0.0003 --seed 0
+--task count --kmax 15 --reg --model ALIBIL --epochs 80 --lr 0.003 --seed 0
+--task induction --model ALIBIL --epochs 80 --lr 0.001 --seed 0
+--task induction --model ALIBIL --epochs 80 --lr 0.0003 --seed 0
+--task induction --model ALIBIL --epochs 80 --lr 0.003 --seed 0

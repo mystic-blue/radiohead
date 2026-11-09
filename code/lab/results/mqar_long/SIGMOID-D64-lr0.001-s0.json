@@ -1,0 +1,20 @@
+{
+ "label": "SIGMOID",
+ "d": 64,
+ "lr": 0.001,
+ "seed": 0,
+ "extra": {
+  "P256": {
+   "acc": 0.2005625,
+   "acc_present": 0.0,
+   "acc_absent": 1.0,
+   "T": 528
+  },
+  "P496": {
+   "acc": 0.203375,
+   "acc_present": 0.0,
+   "acc_absent": 1.0,
+   "T": 1008
+  }
+ }
+}

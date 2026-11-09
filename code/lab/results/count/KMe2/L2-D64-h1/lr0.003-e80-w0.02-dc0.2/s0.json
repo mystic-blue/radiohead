@@ -1,0 +1,101 @@
+{
+ "args": {
+  "task": "count",
+  "model": "KM",
+  "explicit": 2,
+  "norm": false,
+  "noage": false,
+  "noant": false,
+  "d_model": 64,
+  "heads": 1,
+  "layers": 2,
+  "seed": 0,
+  "lr": 0.003,
+  "epochs": 80,
+  "stop_after": 0,
+  "warmup": 0.02,
+  "decay": 0.2,
+  "frac": 0.1,
+  "pairs": null,
+  "device": null,
+  "threads": 2,
+  "smoke": false
+ },
+ "label": "KMe2",
+ "cfg": {
+  "model": "KM",
+  "mask_self": true,
+  "max_len": 32,
+  "pos_len": 512,
+  "pg_d_osc": 32,
+  "km_explicit": 2,
+  "km_delta": 0.001,
+  "km_rho": 1e-08,
+  "km_norm": false,
+  "km_noage": false,
+  "km_noant": false
+ },
+ "net": {
+  "task": "cls",
+  "vocab": 51,
+  "n_out": 4,
+  "d_model": 64,
+  "n_heads": 1,
+  "n_layers": 2,
+  "d_ff": 128,
+  "dropout": 0.0,
+  "embed_scale": true,
+  "init_std": 0.02,
+  "padding_idx": null,
+  "pe": "none"
+ },
+ "meta": {
+  "vocab": 51,
+  "n_out": 4,
+  "max_len": 32,
+  "kind": "cls"
+ },
+ "params": 62160,
+ "attn_params": 24844,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.390921813583374,
+   "lr": 0.0018884462151394423,
+   "secs": 9.7,
+   "val_loss": 1.3873427543640138,
+   "val_acc": 0.271
+  }
+ ],
+ "best_epoch": 1,
+ "val": {
+  "loss": 1.3873427543640138,
+  "acc": 0.271
+ },
+ "test": {
+  "loss": 1.3855640335083008,
+  "acc": 0.285
+ },
+ "extra": {
+  "T64": {
+   "loss": 1.3920071601867676,
+   "acc": 0.258
+  },
+  "T128": {
+   "loss": 1.3922648010253906,
+   "acc": 0.2495
+  },
+  "T256": {
+   "loss": 1.3941360549926758,
+   "acc": 0.247
+  },
+  "T512": {
+   "loss": 1.397674331665039,
+   "acc": 0.2385
+  }
+ },
+ "diverged_at": 2,
+ "secs": 52.4,
+ "device": "cpu",
+ "finished": "2026-10-23 21:17:12"
+}

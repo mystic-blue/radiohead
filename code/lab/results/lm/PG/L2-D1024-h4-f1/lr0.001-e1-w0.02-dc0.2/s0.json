@@ -1,0 +1,94 @@
+{
+ "args": {
+  "task": "lm",
+  "model": "PG",
+  "explicit": 0,
+  "norm": false,
+  "noage": false,
+  "noant": false,
+  "same": false,
+  "k0": 1.5,
+  "d_model": 1024,
+  "heads": 4,
+  "layers": 2,
+  "seed": 0,
+  "lr": 0.001,
+  "epochs": 1,
+  "stop_after": 0,
+  "warmup": 0.02,
+  "decay": 0.2,
+  "frac": 1.0,
+  "pairs": null,
+  "reg": false,
+  "kmax": null,
+  "device": null,
+  "threads": 2,
+  "smoke": false
+ },
+ "label": "PG",
+ "cfg": {
+  "model": "PG",
+  "mask_self": false,
+  "max_len": 128,
+  "pos_len": 128,
+  "pg_d_osc": 32,
+  "km_explicit": 0,
+  "km_delta": 0.001,
+  "km_rho": 1e-08,
+  "km_norm": false,
+  "km_noage": false,
+  "km_noant": false,
+  "km_same": false,
+  "km_k0": 1.5
+ },
+ "net": {
+  "task": "lm",
+  "vocab": 8004,
+  "n_out": 8004,
+  "d_model": 1024,
+  "n_heads": 4,
+  "n_layers": 2,
+  "d_ff": 2048,
+  "dropout": 0.1,
+  "embed_scale": false,
+  "init_std": 0.0,
+  "padding_idx": 0,
+  "pe": "sinusoidal"
+ },
+ "meta": {
+  "vocab": 8004,
+  "n_out": 8004,
+  "max_len": 128,
+  "kind": "lm",
+  "n_train": 4635621
+ },
+ "params": 33228612,
+ "attn_params": 8423424,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 2.0730476416096075,
+   "lr": 0.0,
+   "secs": 45909.9,
+   "val_loss": 1.7681411286363984,
+   "val_acc": 0.5653959993192141,
+   "val_ppl": 5.859950336988662
+  }
+ ],
+ "best_epoch": 1,
+ "val": {
+  "loss": 1.7681411286363984,
+  "acc": 0.5653959993192141,
+  "ppl": 5.859950336988662
+ },
+ "test": {
+  "loss": 1.6947098154980966,
+  "acc": 0.5743550710487655,
+  "ppl": 5.445065662267139
+ },
+ "extra": {},
+ "diverged_at": null,
+ "secs": 46013.1,
+ "device": "mps",
+ "finished": "2026-10-29 18:42:30"
+}

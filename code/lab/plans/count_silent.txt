@@ -1,0 +1,6 @@
+# 25 oct: comptar amb inici a la fase silent (K/K_c = 0.5), 1e-3, 80 epoques
+--task count --model KM --k0 0.5 --epochs 80 --lr 0.001 --seed 0
+--task count --model KM --k0 0.5 --epochs 80 --lr 0.001 --seed 1
+--task count --model KM --k0 0.5 --epochs 80 --lr 0.001 --seed 2
+--task count --model KM --k0 0.5 --epochs 80 --lr 0.001 --seed 3
+--task count --model KM --k0 0.5 --epochs 80 --lr 0.001 --seed 4

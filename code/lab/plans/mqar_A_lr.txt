@@ -1,0 +1,28 @@
+# MQAR fase A (19 oct): lr per model a d_h 64 (1 cap, 2 capes), 16 parells, 80 èpoques, seed 0; tria per validació
+--task mqar --model SM --epochs 80 --lr 0.001 --seed 0
+--task mqar --model GATED --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SIGMOID --epochs 80 --lr 0.001 --seed 0
+--task mqar --model PG --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --explicit 2 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --norm --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noage --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noant --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SM --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model GATED --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model SIGMOID --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model PG --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --explicit 2 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --norm --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --noage --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --noant --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model SM --epochs 80 --lr 0.003 --seed 0
+--task mqar --model GATED --epochs 80 --lr 0.003 --seed 0
+--task mqar --model SIGMOID --epochs 80 --lr 0.003 --seed 0
+--task mqar --model PG --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --explicit 2 --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --norm --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --noage --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --noant --epochs 80 --lr 0.003 --seed 0

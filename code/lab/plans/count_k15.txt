@@ -1,0 +1,21 @@
+# 25 oct: comptar fins a 15 copies (kmax 15), 1e-3, 80 epoques: on satura i on falla
+--task count --model KM --k0 0.5 --kmax 15 --epochs 80 --lr 0.001 --seed 0
+--task count --model KM --kmax 15 --epochs 80 --lr 0.001 --seed 0
+--task count --model SM --kmax 15 --epochs 80 --lr 0.001 --seed 0
+--task count --model KM --k0 0.5 --kmax 15 --epochs 80 --lr 0.001 --seed 1
+--task count --model KM --kmax 15 --epochs 80 --lr 0.001 --seed 1
+--task count --model SM --kmax 15 --epochs 80 --lr 0.001 --seed 1
+--task count --model KM --k0 0.5 --kmax 15 --epochs 80 --lr 0.001 --seed 2
+--task count --model KM --kmax 15 --epochs 80 --lr 0.001 --seed 2
+--task count --model SM --kmax 15 --epochs 80 --lr 0.001 --seed 2
+--task count --model KM --k0 0.5 --kmax 15 --epochs 80 --lr 0.001 --seed 3
+--task count --model KM --kmax 15 --epochs 80 --lr 0.001 --seed 3
+--task count --model SM --kmax 15 --epochs 80 --lr 0.001 --seed 3
+--task count --model KM --k0 0.5 --kmax 15 --epochs 80 --lr 0.001 --seed 4
+--task count --model KM --kmax 15 --epochs 80 --lr 0.001 --seed 4
+--task count --model SM --kmax 15 --epochs 80 --lr 0.001 --seed 4
+--task count --model PG --kmax 15 --epochs 80 --lr 0.001 --seed 0
+--task count --model PG --kmax 15 --epochs 80 --lr 0.001 --seed 1
+--task count --model PG --kmax 15 --epochs 80 --lr 0.001 --seed 2
+--task count --model PG --kmax 15 --epochs 80 --lr 0.001 --seed 3
+--task count --model PG --kmax 15 --epochs 80 --lr 0.001 --seed 4

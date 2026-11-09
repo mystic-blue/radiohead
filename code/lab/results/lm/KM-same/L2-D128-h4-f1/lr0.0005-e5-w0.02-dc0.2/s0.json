@@ -1,0 +1,130 @@
+{
+ "args": {
+  "task": "lm",
+  "model": "KM",
+  "explicit": 0,
+  "norm": false,
+  "noage": false,
+  "noant": false,
+  "same": true,
+  "k0": 1.5,
+  "d_model": 128,
+  "heads": 4,
+  "layers": 2,
+  "seed": 0,
+  "lr": 0.0005,
+  "epochs": 5,
+  "stop_after": 0,
+  "warmup": 0.02,
+  "decay": 0.2,
+  "frac": 1.0,
+  "pairs": null,
+  "reg": false,
+  "kmax": null,
+  "device": null,
+  "threads": 2,
+  "smoke": false
+ },
+ "label": "KM-same",
+ "cfg": {
+  "model": "KM",
+  "mask_self": false,
+  "max_len": 128,
+  "pos_len": 128,
+  "pg_d_osc": 32,
+  "km_explicit": 0,
+  "km_delta": 0.001,
+  "km_rho": 1e-08,
+  "km_norm": false,
+  "km_noage": false,
+  "km_noant": false,
+  "km_same": true,
+  "km_k0": 1.5
+ },
+ "net": {
+  "task": "lm",
+  "vocab": 8004,
+  "n_out": 8004,
+  "d_model": 128,
+  "n_heads": 4,
+  "n_layers": 2,
+  "d_ff": 256,
+  "dropout": 0.1,
+  "embed_scale": false,
+  "init_std": 0.0,
+  "padding_idx": 0,
+  "pe": "none"
+ },
+ "meta": {
+  "vocab": 8004,
+  "n_out": 8004,
+  "max_len": 128,
+  "kind": "lm",
+  "n_train": 4635621
+ },
+ "params": 2289780,
+ "attn_params": 99632,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 2.9146206134185815,
+   "lr": 0.0005,
+   "secs": 9008.3,
+   "val_loss": 2.430376586950853,
+   "val_acc": 0.4627056983905796,
+   "val_ppl": 11.363160492315625
+  },
+  {
+   "epoch": 2,
+   "train_loss": 2.4186629423004264,
+   "lr": 0.0005,
+   "secs": 8157.5,
+   "val_loss": 2.3235611859878165,
+   "val_acc": 0.4769219791012917,
+   "val_ppl": 10.211976375674135
+  },
+  {
+   "epoch": 3,
+   "train_loss": 2.345688781085782,
+   "lr": 0.0005,
+   "secs": 7942.9,
+   "val_loss": 2.2780667294283465,
+   "val_acc": 0.48301846986281455,
+   "val_ppl": 9.757797699579664
+  },
+  {
+   "epoch": 4,
+   "train_loss": 2.306791024792091,
+   "lr": 0.0005,
+   "secs": 8068.9,
+   "val_loss": 2.2499270751649276,
+   "val_acc": 0.4866725969499374,
+   "val_ppl": 9.487043970014875
+  },
+  {
+   "epoch": 5,
+   "train_loss": 2.277734902754251,
+   "lr": 0.0,
+   "secs": 9414.3,
+   "val_loss": 2.2244203637549274,
+   "val_acc": 0.49077991646189906,
+   "val_ppl": 9.24812070406443
+  }
+ ],
+ "best_epoch": 5,
+ "val": {
+  "loss": 2.2244203637549274,
+  "acc": 0.49077991646189906,
+  "ppl": 9.24812070406443
+ },
+ "test": {
+  "loss": 2.153512960579443,
+  "acc": 0.4971028931707512,
+  "ppl": 8.615069700797086
+ },
+ "extra": {},
+ "diverged_at": null,
+ "secs": 42634.6,
+ "device": "mps",
+ "finished": "2026-11-03 11:40:40"
+}

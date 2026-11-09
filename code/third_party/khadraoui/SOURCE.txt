@@ -1,0 +1,2 @@
+2d7216941d3ca2023ac4fea4e9b710eed87c2f6e Fri Aug 28 21:15:36 2026 +0200
+https://github.com/aissamdev/attention-by-oscillator-synchronization (codes/attention.py, unmodified)

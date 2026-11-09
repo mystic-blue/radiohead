@@ -1,0 +1,88 @@
+# count + induction fase B (24 oct, nit): seeds 1-4 al lr triat per val loss (plans/ci_lr_chosen.json, seed 0);
+# KM també a lr 1e-3 (la run del mecanisme triada pels autors). Prioritat: models de la figura, seeds 1-2 primer.
+# 25 oct: tot a 1e-3 (usuari); softmax tambe a 1e-3
+# 25 oct: SM induccio 1e-3 es queda a ~0.6 en 80 epoques -> 240 epoques
+--task induction --model SM --epochs 240 --lr 0.001 --seed 0
+--task induction --model SM --epochs 240 --lr 0.001 --seed 1
+--task induction --model SM --epochs 240 --lr 0.001 --seed 2
+--task induction --model SM --epochs 240 --lr 0.001 --seed 3
+--task induction --model SM --epochs 240 --lr 0.001 --seed 4
+--task count --model SM --epochs 80 --lr 0.001 --seed 1
+--task induction --model SM --epochs 80 --lr 0.001 --seed 1
+--task count --model SM --epochs 80 --lr 0.001 --seed 2
+--task induction --model SM --epochs 80 --lr 0.001 --seed 2
+--task count --model SM --epochs 80 --lr 0.001 --seed 3
+--task induction --model SM --epochs 80 --lr 0.001 --seed 3
+--task count --model SM --epochs 80 --lr 0.001 --seed 4
+--task induction --model SM --epochs 80 --lr 0.001 --seed 4
+--task count --model SM --epochs 80 --lr 0.0003 --seed 1
+--task count --model PG --epochs 80 --lr 0.001 --seed 1
+--task count --model KM --epochs 80 --lr 0.001 --seed 1
+--task induction --model SM --epochs 80 --lr 0.0003 --seed 1
+--task induction --model PG --epochs 80 --lr 0.001 --seed 1
+--task induction --model KM --epochs 80 --lr 0.001 --seed 1
+--task count --model SM --epochs 80 --lr 0.0003 --seed 2
+--task count --model PG --epochs 80 --lr 0.001 --seed 2
+--task count --model KM --epochs 80 --lr 0.001 --seed 2
+--task induction --model SM --epochs 80 --lr 0.0003 --seed 2
+--task induction --model PG --epochs 80 --lr 0.001 --seed 2
+--task induction --model KM --epochs 80 --lr 0.001 --seed 2
+--task count --model GATED --epochs 80 --lr 0.0003 --seed 1
+--task count --model SIGMOID --epochs 80 --lr 0.001 --seed 1
+--task count --model KM --explicit 2 --epochs 80 --lr 0.0003 --seed 1
+--task count --model KM --noage --epochs 80 --lr 0.001 --seed 1
+--task count --model KM --noant --epochs 80 --lr 0.0003 --seed 1
+--task induction --model GATED --epochs 80 --lr 0.001 --seed 1
+--task induction --model SIGMOID --epochs 80 --lr 0.0003 --seed 1
+--task induction --model KM --explicit 2 --epochs 80 --lr 0.001 --seed 1
+--task induction --model KM --noage --epochs 80 --lr 0.001 --seed 1
+--task induction --model KM --noant --epochs 80 --lr 0.001 --seed 1
+--task count --model GATED --epochs 80 --lr 0.0003 --seed 2
+--task count --model SIGMOID --epochs 80 --lr 0.001 --seed 2
+--task count --model KM --explicit 2 --epochs 80 --lr 0.0003 --seed 2
+--task count --model KM --noage --epochs 80 --lr 0.001 --seed 2
+--task count --model KM --noant --epochs 80 --lr 0.0003 --seed 2
+--task induction --model GATED --epochs 80 --lr 0.001 --seed 2
+--task induction --model SIGMOID --epochs 80 --lr 0.0003 --seed 2
+--task induction --model KM --explicit 2 --epochs 80 --lr 0.001 --seed 2
+--task induction --model KM --noage --epochs 80 --lr 0.001 --seed 2
+--task induction --model KM --noant --epochs 80 --lr 0.001 --seed 2
+--task count --model SM --epochs 80 --lr 0.0003 --seed 3
+--task count --model PG --epochs 80 --lr 0.001 --seed 3
+--task count --model KM --epochs 80 --lr 0.001 --seed 3
+--task induction --model SM --epochs 80 --lr 0.0003 --seed 3
+--task induction --model PG --epochs 80 --lr 0.001 --seed 3
+--task induction --model KM --epochs 80 --lr 0.001 --seed 3
+--task count --model SM --epochs 80 --lr 0.0003 --seed 4
+--task count --model PG --epochs 80 --lr 0.001 --seed 4
+--task count --model KM --epochs 80 --lr 0.001 --seed 4
+--task induction --model SM --epochs 80 --lr 0.0003 --seed 4
+--task induction --model PG --epochs 80 --lr 0.001 --seed 4
+--task induction --model KM --epochs 80 --lr 0.001 --seed 4
+--task count --model GATED --epochs 80 --lr 0.0003 --seed 3
+--task count --model SIGMOID --epochs 80 --lr 0.001 --seed 3
+--task count --model KM --explicit 2 --epochs 80 --lr 0.0003 --seed 3
+--task count --model KM --noage --epochs 80 --lr 0.001 --seed 3
+--task count --model KM --noant --epochs 80 --lr 0.0003 --seed 3
+--task induction --model GATED --epochs 80 --lr 0.001 --seed 3
+--task induction --model SIGMOID --epochs 80 --lr 0.0003 --seed 3
+--task induction --model KM --explicit 2 --epochs 80 --lr 0.001 --seed 3
+--task induction --model KM --noage --epochs 80 --lr 0.001 --seed 3
+--task induction --model KM --noant --epochs 80 --lr 0.001 --seed 3
+--task count --model GATED --epochs 80 --lr 0.0003 --seed 4
+--task count --model SIGMOID --epochs 80 --lr 0.001 --seed 4
+--task count --model KM --explicit 2 --epochs 80 --lr 0.0003 --seed 4
+--task count --model KM --noage --epochs 80 --lr 0.001 --seed 4
+--task count --model KM --noant --epochs 80 --lr 0.0003 --seed 4
+--task induction --model GATED --epochs 80 --lr 0.001 --seed 4
+--task induction --model SIGMOID --epochs 80 --lr 0.0003 --seed 4
+--task induction --model KM --explicit 2 --epochs 80 --lr 0.001 --seed 4
+--task induction --model KM --noage --epochs 80 --lr 0.001 --seed 4
+--task induction --model KM --noant --epochs 80 --lr 0.001 --seed 4
+# MQAR (recall), seeds 3-4 at d 64 for the figure models, lr of phase A; then python3 eval_long.py --models SM PG KM --d 64
+--task mqar --model SM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 3
+--task mqar --model PG --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 3
+--task mqar --model KM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 3
+--task mqar --model SM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 4
+--task mqar --model PG --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 4
+--task mqar --model KM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 4

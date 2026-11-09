@@ -1,0 +1,36 @@
+# 26 oct: Fig. 4 = performance vs head width d (d_model 128 split into 1-8 heads, two layers, 6 epochs, lr 1e-3):
+# softmax+RoPE, PG, radio head implicit and explicit (one Newton step), all heads start at the same ageing rate.
+# Seed 1 first (complete figure early), then seed 0 (all lab), then the wide heads at d_model 256.
+--task lm --model KM --d_model 256 --heads 4 --layers 2 --seed 0
+--task lm --model KM --same --d_model 128 --heads 8 --layers 2 --seed 1
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --seed 1
+--task lm --model KM --same --d_model 128 --heads 2 --layers 2 --seed 1
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 1 --layers 2 --seed 1
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 2 --layers 2 --seed 1
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 4 --layers 2 --seed 1
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 8 --layers 2 --seed 1
+--task lm --model PG --d_model 128 --heads 1 --layers 2 --seed 1
+--task lm --model PG --d_model 128 --heads 2 --layers 2 --seed 1
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --seed 1
+--task lm --model PG --d_model 128 --heads 8 --layers 2 --seed 1
+--task lm --model SM --d_model 128 --heads 1 --layers 2 --seed 0
+--task lm --model SM --d_model 128 --heads 2 --layers 2 --seed 0
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --seed 0
+--task lm --model SM --d_model 128 --heads 8 --layers 2 --seed 0
+--task lm --model KM --same --d_model 128 --heads 1 --layers 2 --seed 0
+--task lm --model KM --same --d_model 128 --heads 2 --layers 2 --seed 0
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --seed 0
+--task lm --model KM --same --d_model 128 --heads 8 --layers 2 --seed 0
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 1 --layers 2 --seed 0
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 2 --layers 2 --seed 0
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 4 --layers 2 --seed 0
+--task lm --model KM --explicit 1 --same --d_model 128 --heads 8 --layers 2 --seed 0
+--task lm --model PG --d_model 128 --heads 1 --layers 2 --seed 0
+--task lm --model PG --d_model 128 --heads 2 --layers 2 --seed 0
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --seed 0
+--task lm --model PG --d_model 128 --heads 8 --layers 2 --seed 0
+# wide heads at d_model 256 (d = 256, 128), seed 0
+--task lm --model KM --same --d_model 256 --heads 1 --layers 2 --seed 0
+--task lm --model SM --d_model 256 --heads 1 --layers 2 --seed 0
+--task lm --model KM --same --d_model 256 --heads 2 --layers 2 --seed 0
+--task lm --model SM --d_model 256 --heads 2 --layers 2 --seed 0

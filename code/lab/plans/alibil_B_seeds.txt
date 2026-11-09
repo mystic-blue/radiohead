@@ -1,0 +1,16 @@
+# ALIBIL seeds 1-4 at the lr chosen on validation at seed 0 (written by alibil_driver.sh)
+# mqar: lr 0.003
+--task mqar --model ALIBIL --epochs 80 --lr 0.003 --seed 1
+--task mqar --model ALIBIL --epochs 80 --lr 0.003 --seed 2
+--task mqar --model ALIBIL --epochs 80 --lr 0.003 --seed 3
+--task mqar --model ALIBIL --epochs 80 --lr 0.003 --seed 4
+# count: lr 0.001
+--task count --model ALIBIL --kmax 15 --reg --epochs 80 --lr 0.001 --seed 1
+--task count --model ALIBIL --kmax 15 --reg --epochs 80 --lr 0.001 --seed 2
+--task count --model ALIBIL --kmax 15 --reg --epochs 80 --lr 0.001 --seed 3
+--task count --model ALIBIL --kmax 15 --reg --epochs 80 --lr 0.001 --seed 4
+# induction: lr 0.001
+--task induction --model ALIBIL --epochs 80 --lr 0.001 --seed 1
+--task induction --model ALIBIL --epochs 80 --lr 0.001 --seed 2
+--task induction --model ALIBIL --epochs 80 --lr 0.001 --seed 3
+--task induction --model ALIBIL --epochs 80 --lr 0.001 --seed 4

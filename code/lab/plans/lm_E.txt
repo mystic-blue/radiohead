@@ -1,0 +1,33 @@
+# 26 oct: Fig. 4. Four heads fixed, full TinyStories, one epoch, lr 1e-3, seed 0. d_head = d_model/4.
+# 26 oct: m = 128 for Fig. 3(a): one head of width 256 in the d_model 256 host, as the width sweep (10%, six epochs, seed 1)
+# Block 1: d_head 64, two layers (the shared point of both panels)
+--task lm --model SM --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+# Block 2: d_head 128 and 32
+--task lm --model SM --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+# m = 128 for Fig. 2(a-c) (moved after m = 64, 26 oct)
+--task lm --model PG --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --d_model 256 --heads 1 --layers 2 --seed 1
+# one effective token and PG at m = 32 (moved after m = 64, 26 oct)
+--task lm --model KM --same --explicit 1 --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+# Block 3 (26 oct: Fig. 4 has two panels, d_head only): d_head 16, then PG and explicit at the other widths
+--task lm --model KM --same --explicit 1 --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 1024 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 1024 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 1024 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 1024 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+# Block 4 (last, not in the figure): layers 1 and 4 at d_head 64
+--task lm --model SM --d_model 256 --heads 4 --layers 1 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 256 --heads 4 --layers 1 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 256 --heads 4 --layers 4 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 256 --heads 4 --layers 4 --frac 1 --epochs 1 --seed 0

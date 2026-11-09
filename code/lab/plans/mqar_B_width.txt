@@ -1,0 +1,109 @@
+# MQAR fase B: amplada x seeds al lr triat a la fase A {'SM': 0.001, 'GATED': 0.001, 'SIGMOID': 0.0003, 'PG': 0.0003, 'KM': 0.001, 'KMe2': 0.003, 'KM-norm': 0.001, 'KM-noage': 0.001, 'KM-noant': 0.001}
+--task mqar --model SM --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model GATED --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SIGMOID --d_model 16 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model PG --d_model 16 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --explicit 2 --d_model 16 --heads 1 --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --norm --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noage --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noant --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SM --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model GATED --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SIGMOID --d_model 32 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model PG --d_model 32 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --explicit 2 --d_model 32 --heads 1 --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --norm --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noage --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noant --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model GATED --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SIGMOID --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model PG --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --explicit 2 --d_model 64 --heads 1 --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --norm --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noage --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noant --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SM --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model GATED --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SIGMOID --d_model 128 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model PG --d_model 128 --heads 1 --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model KM --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --explicit 2 --d_model 128 --heads 1 --epochs 80 --lr 0.003 --seed 0
+--task mqar --model KM --norm --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noage --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model KM --noant --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 0
+--task mqar --model SM --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model GATED --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SIGMOID --d_model 16 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model PG --d_model 16 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model KM --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --explicit 2 --d_model 16 --heads 1 --epochs 80 --lr 0.003 --seed 1
+--task mqar --model KM --norm --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noage --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noant --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SM --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model GATED --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SIGMOID --d_model 32 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model PG --d_model 32 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model KM --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --explicit 2 --d_model 32 --heads 1 --epochs 80 --lr 0.003 --seed 1
+--task mqar --model KM --norm --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noage --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noant --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model GATED --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SIGMOID --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model PG --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model KM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --explicit 2 --d_model 64 --heads 1 --epochs 80 --lr 0.003 --seed 1
+--task mqar --model KM --norm --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noage --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noant --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SM --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model GATED --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SIGMOID --d_model 128 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model PG --d_model 128 --heads 1 --epochs 80 --lr 0.0003 --seed 1
+--task mqar --model KM --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --explicit 2 --d_model 128 --heads 1 --epochs 80 --lr 0.003 --seed 1
+--task mqar --model KM --norm --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noage --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model KM --noant --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 1
+--task mqar --model SM --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model GATED --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SIGMOID --d_model 16 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model PG --d_model 16 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model KM --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --explicit 2 --d_model 16 --heads 1 --epochs 80 --lr 0.003 --seed 2
+--task mqar --model KM --norm --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noage --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noant --d_model 16 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SM --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model GATED --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SIGMOID --d_model 32 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model PG --d_model 32 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model KM --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --explicit 2 --d_model 32 --heads 1 --epochs 80 --lr 0.003 --seed 2
+--task mqar --model KM --norm --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noage --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noant --d_model 32 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model GATED --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SIGMOID --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model PG --d_model 64 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model KM --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --explicit 2 --d_model 64 --heads 1 --epochs 80 --lr 0.003 --seed 2
+--task mqar --model KM --norm --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noage --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noant --d_model 64 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SM --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model GATED --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model SIGMOID --d_model 128 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model PG --d_model 128 --heads 1 --epochs 80 --lr 0.0003 --seed 2
+--task mqar --model KM --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --explicit 2 --d_model 128 --heads 1 --epochs 80 --lr 0.003 --seed 2
+--task mqar --model KM --norm --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noage --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 2
+--task mqar --model KM --noant --d_model 128 --heads 1 --epochs 80 --lr 0.001 --seed 2

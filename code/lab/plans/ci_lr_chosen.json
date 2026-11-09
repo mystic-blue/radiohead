@@ -1,0 +1,18 @@
+{
+ "count|GATED": 0.0003,
+ "count|KM": 0.003,
+ "count|KM-noage": 0.003,
+ "count|KM-noant": 0.0003,
+ "count|KMe2": 0.0003,
+ "count|PG": 0.001,
+ "count|SIGMOID": 0.001,
+ "count|SM": 0.0003,
+ "induction|GATED": 0.001,
+ "induction|KM": 0.003,
+ "induction|KM-noage": 0.001,
+ "induction|KM-noant": 0.001,
+ "induction|KMe2": 0.001,
+ "induction|PG": 0.001,
+ "induction|SIGMOID": 0.0003,
+ "induction|SM": 0.0003
+}

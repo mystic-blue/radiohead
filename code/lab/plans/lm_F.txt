@@ -1,0 +1,68 @@
+# lm_F (31 Oct 2026): all language on the full data, one epoch, lr 1e-3
+# Block 1: Fig. 3(d,h), seeds 1 and 2 at d_model 256, four heads (seed 0 exists)
+--task lm --model SM --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+# (31 Oct: two seeds suffice) --task lm --model SM --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 2
+# (31 Oct: two seeds suffice) --task lm --model KM --same --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 2
+# (31 Oct: two seeds suffice) --task lm --model PG --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 2
+# Block 2: Fig. 2(d) on the full data, d_model 128 split into 8, 4, 2, 1 heads, seeds 0 and 1 (h4 s0 exists from (e))
+--task lm --model SM --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model SM --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model PG --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 0
+# lr check (2 Nov): PG's own rate 5e-4 at their configuration (d_model 128, four heads), seed 0
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0 --lr 5e-4
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0 --lr 5e-4
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0 --lr 5e-4
+# PG's protocol (2 Nov): five epochs at 5e-4, d_model 128, four heads (their Table 4: softmax 8.67, PG d_osc=32 9.11), seed 0
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 5 --seed 0 --lr 5e-4
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 5 --seed 0 --lr 5e-4
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 5 --seed 0 --lr 5e-4
+--task lm --model SM --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 128 --heads 8 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model SM --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 128 --heads 2 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model SM --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 128 --heads 1 --layers 2 --frac 1 --epochs 1 --seed 1
+# Block 3: Fig. 2(e), seed 1 up to m = 64
+--task lm --model SM --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 64 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 128 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model SM --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model SM --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model KM --same --explicit 1 --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model PG --d_model 512 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1
+--task lm --model ALIBI --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 0
+--task lm --model ALIBI --d_model 256 --heads 4 --layers 2 --frac 1 --epochs 1 --seed 1

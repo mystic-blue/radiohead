@@ -1,0 +1,23 @@
+# language (24 oct, nit), GPU, one at a time. C1: definitive language column, d_model 256, 4 heads (d_h 64), 2 layers,
+# 6 epochs, KM with identical head initialization (--same) vs softmax, seeds 0-1.
+--task lm --model KM --same --d_model 256 --heads 4 --layers 2 --seed 0
+--task lm --model SM --d_model 256 --heads 4 --layers 2 --seed 0
+--task lm --model KM --same --d_model 256 --heads 4 --layers 2 --seed 1
+--task lm --model SM --d_model 256 --heads 4 --layers 2 --seed 1
+# C2: width sweep, second seed (seed 0 = bench runs, same protocol): d_model 128, 2 layers, 1-8 heads, 6 epochs.
+--task lm --model SM --d_model 128 --heads 1 --layers 2 --seed 1
+--task lm --model SM --d_model 128 --heads 2 --layers 2 --seed 1
+--task lm --model SM --d_model 128 --heads 4 --layers 2 --seed 1
+--task lm --model SM --d_model 128 --heads 8 --layers 2 --seed 1
+# C3 (if time remains): third seed of the language column
+--task lm --model KM --same --d_model 256 --heads 4 --layers 2 --seed 2
+--task lm --model SM --d_model 256 --heads 4 --layers 2 --seed 2
+# C2 (radio head part)
+--task lm --model KM --d_model 128 --heads 2 --layers 2 --seed 1
+--task lm --model KM --d_model 128 --heads 1 --layers 2 --seed 1
+--task lm --model KM --d_model 128 --heads 4 --layers 2 --seed 1
+--task lm --model KM --d_model 128 --heads 8 --layers 2 --seed 1
+# 25 oct: PG al llenguatge (extrapolacio), mateix host
+--task lm --model PG --d_model 256 --heads 4 --layers 2 --seed 0
+--task lm --model PG --d_model 256 --heads 4 --layers 2 --seed 1
+--task lm --model PG --d_model 256 --heads 4 --layers 2 --seed 2

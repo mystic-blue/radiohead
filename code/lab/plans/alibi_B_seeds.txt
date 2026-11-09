@@ -1,0 +1,13 @@
+# 6 Nov 2026: ALiBi seeds 1-4 at the lr chosen on validation at seed 0 (mqar 1e-3, count 3e-4, induction 3e-3)
+--task mqar --model ALIBI --epochs 80 --lr 0.001 --seed 1
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.0003 --seed 1
+--task induction --model ALIBI --epochs 80 --lr 0.003 --seed 1
+--task mqar --model ALIBI --epochs 80 --lr 0.001 --seed 2
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.0003 --seed 2
+--task induction --model ALIBI --epochs 80 --lr 0.003 --seed 2
+--task mqar --model ALIBI --epochs 80 --lr 0.001 --seed 3
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.0003 --seed 3
+--task induction --model ALIBI --epochs 80 --lr 0.003 --seed 3
+--task mqar --model ALIBI --epochs 80 --lr 0.001 --seed 4
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.0003 --seed 4
+--task induction --model ALIBI --epochs 80 --lr 0.003 --seed 4

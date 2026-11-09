@@ -1,0 +1,10 @@
+# 6 Nov 2026: softmax + ALiBi (Press et al. 2022) in the synthetic tasks, phase A: lr at seed 0, chosen on validation
+--task mqar --model ALIBI --epochs 80 --lr 0.001 --seed 0
+--task mqar --model ALIBI --epochs 80 --lr 0.0003 --seed 0
+--task mqar --model ALIBI --epochs 80 --lr 0.003 --seed 0
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.001 --seed 0
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.0003 --seed 0
+--task count --model ALIBI --kmax 15 --reg --epochs 80 --lr 0.003 --seed 0
+--task induction --model ALIBI --epochs 80 --lr 0.001 --seed 0
+--task induction --model ALIBI --epochs 80 --lr 0.0003 --seed 0
+--task induction --model ALIBI --epochs 80 --lr 0.003 --seed 0

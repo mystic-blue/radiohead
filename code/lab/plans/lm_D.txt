@@ -1,0 +1,2 @@
+# 26 oct: paused (Fig. 4 redesigned: fixed number of heads, full TinyStories). Only the running job stays.
+--task lm --model KM --d_model 256 --heads 4 --layers 2 --seed 0
